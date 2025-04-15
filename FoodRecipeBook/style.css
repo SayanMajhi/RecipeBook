@@ -7,10 +7,11 @@
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
     background: #fafafa;
     color: #333;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 /* Top Bar */
@@ -32,10 +33,6 @@ body {
     transition: color 0.3s ease;
 }
 
-.top-bar a:hover {
-    color: #f5d082;
-}
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -45,6 +42,40 @@ body {
     background: white;
     border-bottom: 1px solid #eee;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5d082;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    font-size: 1.5rem;
+}
+
+/* Underline from center */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 .logo {
@@ -73,7 +104,7 @@ body {
 }
 
 .navbar li a:hover {
-    color: #5c2a50;
+    color: #f5d082;
 }
 
 /* Intro Section */
@@ -84,14 +115,20 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
+.intro1 {
+    font-family: 'Poppins', sans-serif;
+}
+
 .intro em {
-    font-family: cursive;
+    font-family: 'Dancing Script', cursive;
     color: #86566d;
+    font-size: 3rem;
 }
 
 /* Block Section */
 .block {
-    width: 100vw;
+    width: 100%;
+    /* Use 100% instead of 100vw to prevent overflow */
     background-color: #f5f5f5;
     padding: 35px 0;
     margin: 35px 0;
@@ -100,7 +137,8 @@ body {
 
 /* Categories Section */
 .catagories {
-    width: 100vw;
+    width: 100%;
+    /* Use 100% instead of 100vw to prevent overflow */
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -117,8 +155,6 @@ body {
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* overflow: hidden; */
-    /* fix it */
 }
 
 .card img {
@@ -280,6 +316,95 @@ body {
     transform: scale(1.05);
 }
 
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background: #2d142c;
+    color: #f1f1f1;
+    padding: 25px 50px 25px 180px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: #f5d082;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Brand,
+.socials {
+    height: 120px;
+    width: 33.3%;
+}
+
+.About {
+    height: 120px;
+    width: 33.3%;
+    padding-left: 100px;
+}
+
+.brand {
+    color: #f5d082;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.highlight {
+    color: #ff7f50;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #f5d082;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.facebook-icon:hover {
+    content: url("./Images/facebook_colour.svg");
+}
+
+.twitter-icon:hover {
+    content: url("./Images/Twitter_color.png");
+}
+
+.instagram-icon:hover {
+    content: url("./Images/insta_colour.png");
+}
+
+.pinterest-icon:hover {
+    content: url("./Images/pin_colour.png");
+}
+
+.youtube-icon:hover {
+    content: url("./Images/Youtube_colour.png");
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -290,5 +415,54 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .catagories {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .filters {
+        margin: 20px 10px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-section {
+        width: 100%;
     }
 }
