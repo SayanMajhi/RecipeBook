@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Favourite</title>
+    <link rel="icon" href="./Images/icon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dancing+Script">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="favourite.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            💛 OUR RECIPES, YOUR INBOX. <a href="#">SIGN UP</a>
+        </div>
+        <nav class="navbar">
+            <img src="./Images/LOGO.png" alt="logo">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="#footer">ABOUT</a></li>
+                <li><a href="recipe.html">RECIPES</a></li>
+                <li><a href="favourite.html">FAVORITES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="recipe-section">
+        <div class="recipe-header">
+            <div class="recipe-icon">
+                <img src="./Images/Book Up.png" alt="Recipe Icon">
+            </div>
+            <h2 class="recipe-heading">All Recipes</h2>
+        </div>
+    </section>
+
+    <div class="filter-container">
+        <select id="category-dropdown">
+            <option value="all">All</option>
+            <option value="salad">Salad</option>
+            <option value="pasta">Pasta</option>
+            <option value="chicken">Chicken</option>
+        </select>
+    </div>
+
+    <!-- Recipe Grid -->
+    <div class="recipe-grid">
+        <!-- Recipes will be dynamically inserted here -->
+    </div>
+    <div class="pagination"></div> <!-- Container for pagination controls -->
+
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-section brand-section">
+            <h2>
+                <span class="brand">Bites</span>
+                <span class="highlight">Of</span>
+                <span class="brand">Heaven.com</span>
+            </h2>
+            <p>BitesofHeaven is a place where you can please your soul and tummy with delicious food recipes of all
+                cuisine. And our service is absolutely free.</p>
+            <p>© 2023 | All Rights Reserved</p>
+        </div>
+
+        <div class="footer-section contact-section">
+            <h3>Contact Us</h3>
+            <p>bitesofheaven@gmail.com</p>
+            <p>01234567896</p>
+            <p>Oxygen, Wazedia, Bayezid, Chattogram</p>
+        </div>
+
+        <div class="footer-section social-section">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="./Images/Facebook_Vector.png" alt="Facebook" class="social-icon facebook-icon">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <img src="./Images/Twitter_vector.png" alt="Twitter" class="social-icon twitter-icon">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="./Images/Insta_vector.png" alt="Instagram" class="social-icon instagram-icon">
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+                <img src="./Images/pin_vector.png" alt="Pinterest" class="social-icon pinterest-icon">
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <img src="./Images/Youtube_vector.png" alt="YouTube" class="social-icon youtube-icon">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="recipe.js"></script>
+</body>
+
+</html>
