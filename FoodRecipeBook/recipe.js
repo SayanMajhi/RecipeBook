@@ -1,355 +1,26 @@
-// Array to store recipes
-const recipes = [
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    },
-    {
-        title: "Russian Salad",
-        time: "40 min",
-        rating: "★ 4.5",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Caesar Salad",
-        time: "30 min",
-        rating: "★ 4.3",
-        image: "/api/placeholder/300/150",
-        category: "salad"
-    },
-    {
-        title: "Pasta Primavera",
-        time: "50 min",
-        rating: "★ 4.7",
-        image: "/api/placeholder/300/150",
-        category: "pasta"
-    },
-    {
-        title: "Grilled Chicken",
-        time: "60 min",
-        rating: "★ 4.1",
-        image: "/api/placeholder/300/150",
-        category: "chicken"
-    }
-    // Add more recipes as needed
-];
+import { recipes } from './RecipeData.js';
 
-// Array to store favorite recipes
-const favorites = [];
-
-// Pagination variables
 let currentPage = 1;
-const recipesPerPage = 12; // Number of recipes per page
+const recipesPerPage = 12;
 
-// Function to render recipes dynamically with pagination
+// ===================== FAVORITE STORAGE HELPERS =====================
+function getFavorites() {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
+function saveFavorites(favorites) {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function isFavorite(recipe) {
+    const favorites = getFavorites();
+    return favorites.some(fav => fav.title === recipe.title);
+}
+
+// ===================== RENDER RECIPES =====================
 function renderRecipes(selectedCategory = "all") {
     const recipeGrid = document.querySelector(".recipe-grid");
-    recipeGrid.innerHTML = ""; // Clear existing content
+    recipeGrid.innerHTML = "";
 
     const filteredRecipes = selectedCategory === "all"
         ? recipes
@@ -360,16 +31,18 @@ function renderRecipes(selectedCategory = "all") {
     const paginatedRecipes = filteredRecipes.slice(startIndex, endIndex);
 
     paginatedRecipes.forEach((recipe, index) => {
+        const globalIndex = index + startIndex;
+        const fav = isFavorite(recipe);
         recipeGrid.innerHTML += `
-            <div class="recipe-card">
+            <div class="recipe-card" data-id="${recipe.id}">
                 <div class="recipe-image" style="background-image: url('${recipe.image}');"></div>
                 <div class="recipe-info">
                     <div class="recipe-title">${recipe.title}</div>
                     <div class="recipe-time">${recipe.time}</div>
                     <div class="recipe-actions">
                         <div class="rating">${recipe.rating}</div>
-                        <button class="favorite-btn" data-index="${index + startIndex}">
-                            <img src="./Images/heart.png" alt="Add to favorites" />
+                        <button class="favorite-btn" data-index="${globalIndex}">
+                            <img src="${fav ? './Images/heartcolor.png' : './Images/heart.png'}" alt="Favorite" />
                         </button>
                     </div>
                 </div>
@@ -377,80 +50,74 @@ function renderRecipes(selectedCategory = "all") {
         `;
     });
 
-    // Add event listeners to favorite buttons
+    // Add heart toggle click events
     document.querySelectorAll(".favorite-btn").forEach(button => {
         button.addEventListener("click", toggleFavorite);
+    });
+
+    document.querySelectorAll(".recipe-card").forEach(card => {
+        card.addEventListener("click", (event) => {
+            if (!event.target.closest(".favorite-btn")) {
+                const recipeId = parseInt(card.getAttribute("data-id"));
+                localStorage.setItem('selectedRecipeId', recipeId); // Store the recipe ID in localStorage
+                window.location.href = "recipe-detail.html"; // Redirect to the recipe-detail.html page
+            }
+        });
     });
 
     renderPagination(filteredRecipes.length);
 }
 
-// Function to render pagination controls with Next and Previous buttons
-function renderPagination(totalRecipes) {
-    const paginationContainer = document.querySelector(".pagination");
-    paginationContainer.innerHTML = ""; // Clear existing pagination
-
-    const totalPages = Math.ceil(totalRecipes / recipesPerPage);
-
-    // Add "Previous" button
-    if (currentPage > 1) {
-        paginationContainer.innerHTML += `
-            <button class="pagination-btn prev-btn" data-page="${currentPage - 1}">Previous</button>
-        `;
-    }
-
-    // Add page number buttons
-    for (let i = 1; i <= totalPages; i++) {
-        paginationContainer.innerHTML += `
-            <button class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>
-        `;
-    }
-
-    // Add "Next" button
-    if (currentPage < totalPages) {
-        paginationContainer.innerHTML += `
-            <button class="pagination-btn next-btn" data-page="${currentPage + 1}">Next</button>
-        `;
-    }
-
-    // Add event listeners to pagination buttons
-    document.querySelectorAll(".pagination-btn").forEach(button => {
-        button.addEventListener("click", (event) => {
-            currentPage = parseInt(event.currentTarget.getAttribute("data-page"));
-            renderRecipes(document.querySelector("#category-dropdown").value);
-        });
-    });
-}
-
-// Function to toggle favorite status
+// ===================== TOGGLE FAVORITE =====================
 function toggleFavorite(event) {
+    event.stopPropagation();
     const button = event.currentTarget;
-    const index = button.getAttribute("data-index");
+    const index = parseInt(button.getAttribute("data-index"));
     const recipe = recipes[index];
     const img = button.querySelector("img");
 
-    if (favorites.includes(recipe)) {
-        // Remove from favorites
-        favorites.splice(favorites.indexOf(recipe), 1);
-        img.src = "./Images/heart.png"; // Change to empty heart
+    let favorites = getFavorites();
+    const exists = favorites.some(fav => fav.title === recipe.title);
+
+    if (exists) {
+        favorites = favorites.filter(fav => fav.title !== recipe.title);
+        img.src = "./Images/heart.png";
     } else {
-        // Add to favorites
         favorites.push(recipe);
-        img.src = "./Images/heartcolor.png"; // Change to filled heart
+        img.src = "./Images/heartcolor.png";
     }
 
+    saveFavorites(favorites);
     console.log("Favorites:", favorites);
 }
 
-// Add event listener for category dropdown
-document.addEventListener("DOMContentLoaded", () => {
-    const categoryDropdown = document.querySelector("#category-dropdown");
-    categoryDropdown.addEventListener("change", () => {
-        currentPage = 1; // Reset to the first page when category changes
-        const selectedCategory = categoryDropdown.value;
-        renderRecipes(selectedCategory);
-    });
+// ===================== PAGINATION =====================
+function renderPagination(totalRecipes) {
+    const paginationContainer = document.querySelector(".pagination");
+    paginationContainer.innerHTML = "";
 
-    // Render recipes and pagination on page load
-    renderRecipes();
+    const totalPages = Math.ceil(totalRecipes / recipesPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.classList.add("pagination-btn"); // Add the class for styling
+        if (i === currentPage) button.classList.add("active");
+
+        button.addEventListener("click", () => {
+            currentPage = i;
+            renderRecipes(document.getElementById("category-dropdown").value);
+        });
+
+        paginationContainer.appendChild(button);
+    }
+}
+
+// ===================== CATEGORY FILTER =====================
+document.getElementById("category-dropdown").addEventListener("change", () => {
+    currentPage = 1;
+    renderRecipes(document.getElementById("category-dropdown").value);
 });
+
+// ===================== INITIAL RENDER =====================
+renderRecipes();

@@ -1,0 +1,12 @@
+
+{ id: 91, title: "Vegetable Manchurian", time: "40 min", rating: "★ 4.3", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 92, title: "Tandoori Broccoli", time: "35 min", rating: "★ 4.2", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 93, title: "Stuffed Capsicum", time: "50 min", rating: "★ 4.1", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 94, title: "Malai Kofta", time: "60 min", rating: "★ 4.7", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 95, title: "Dhokla", time: "30 min", rating: "★ 4.4", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 96, title: "Moong Dal Chilla", time: "25 min", rating: "★ 4.2", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 97, title: "Corn Palak", time: "35 min", rating: "★ 4.3", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 98, title: "Tinda Masala", time: "30 min", rating: "★ 4.1", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 99, title: "Zucchini Sabzi", time: "30 min", rating: "★ 4.2", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 100, title: "Vegetable Stew", time: "40 min", rating: "★ 4.3", image: "/api/placeholder/300/150", category: "vegeterian" },
+{ id: 101, title: "Gobi Masala", time: "35 min", rating: "★ 4.5", image: "/api/placeholder/300/150", category: "vegeterian" },

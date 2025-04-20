@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Favourite</title>
+    <title>Recipe Details - Bites of Heaven</title>
     <link rel="icon" href="./Images/icon.png" type="image/png">
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dancing+Script">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!-- External CSS -->
-    <link rel="stylesheet" href="favourite.css">
+    <link rel="stylesheet" href="recipe.css">
+    <link rel="stylesheet" href="recipe-detail.css">
+    <script type="module" src="recipe-detail.js"></script>
 </head>
 
 <body>
@@ -29,33 +29,41 @@
         </nav>
     </header>
 
-    <section class="recipe-section">
-        <div class="recipe-header">
-            <div class="recipe-icon">
-                <img src="./Images/Book Up.png" alt="Recipe Icon">
-            </div>
-            <h2 class="recipe-heading">All Recipes</h2>
-        </div>
-    </section>
 
-    <div class="filter-container">
-        <select id="category-dropdown">
-            <option value="all">All</option>
-            <option value="salad">Salad</option>
-            <option value="pasta">Pasta</option>
-            <option value="chicken">Chicken</option>
-        </select>
+    <div class="recipe-detail-container">
+        <div class="recipe-detail-header">
+            <a href="recipe.html" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        <div class="recipe-main">
+            <h1 id="recipe-title">Recipe Title</h1>
+            <div class="recipe-meta">
+                <span id="recipe-time">30 mins</span>
+                <span id="recipe-rating">4.5</span>
+                <span id="recipe-category">Breakfast</span>
+            </div>
+            <img id="recipe-image" src="" alt="Recipe Image">
+            <p id="recipe-desc">Description of the recipe will appear here.</p>
+
+            <h2>Ingredients</h2>
+            <ul id="ingredients-list"></ul>
+
+            <h2>Instructions</h2>
+            <ol id="instructions-list"></ol>
+
+            <h2>Tips</h2>
+            <ul id="tips-list"></ul>
+        </div>
     </div>
 
-    <!-- Example for your favorites page -->
-    <div class="recipe-grid"></div>
-
-
-    <div class="pagination"></div> <!-- Container for pagination controls -->
-
-
-    <!-- Footer -->
+    <!-- footer -->
     <footer id="footer" class="footer">
+        <!-- Brand Section -->
         <div class="footer-section brand-section">
             <h2>
                 <span class="brand">Bites</span>
@@ -67,6 +75,7 @@
             <p>© 2023 | All Rights Reserved</p>
         </div>
 
+        <!-- Contact Section -->
         <div class="footer-section contact-section">
             <h3>Contact Us</h3>
             <p>bitesofheaven@gmail.com</p>
@@ -74,6 +83,7 @@
             <p>Oxygen, Wazedia, Bayezid, Chattogram</p>
         </div>
 
+        <!-- Social Media Links -->
         <div class="footer-section social-section">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <img src="./Images/Facebook_Vector.png" alt="Facebook" class="social-icon facebook-icon">
@@ -92,9 +102,6 @@
             </a>
         </div>
     </footer>
-
-    <!-- Link to JavaScript -->
-    <script type="module" src="./favourite.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,251 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #5c2a50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 1000;
+    font-family: ConsulSans-750, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5d082;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    font-size: 1.5rem;
+}
+
+/* Underline from center */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.logo {
+    font-size: 24px;
+    color: #5c2a50;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #000;
+    font-weight: normal;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #f5d082;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro em {
+    font-family: 'Dancing Script', cursive;
+    color: #86566d;
+    font-size: 3rem;
+}
+
+.recipe-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-time {
+    color: #ff7f50;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+#recipe-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#recipe-rating {
+    color: #f5d082;
+    font-size: 1rem;
+}
+
+#recipe-category {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.recipe-main img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+h1,
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #2d142c;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: #2d142c;
+    color: #f1f1f1;
+    padding: 25px 50px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #f5d082;
+    font-family: 'Poppins', sans-serif;
+}
+
+.brand {
+    color: #f5d082;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.highlight {
+    color: #ff7f50;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #f5d082;
+}
+
+.social-section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.facebook-icon:hover {
+    content: url("./Images/facebook_colour.svg");
+}
+
+.twitter-icon:hover {
+    content: url("./Images/Twitter_color.png");
+}
+
+.instagram-icon:hover {
+    content: url("./Images/insta_colour.png");
+}
+
+.pinterest-icon:hover {
+    content: url("./Images/pin_colour.png");
+}
+
+.youtube-icon:hover {
+    content: url("./Images/Youtube_colour.png");
+}
