@@ -3,6 +3,16 @@ import { recipes } from './RecipeData.js';
 let currentPage = 1;
 const recipesPerPage = 12;
 
+// ===================== INITIAL RENDER =====================
+const storedCategory = localStorage.getItem("selectedCategory");
+if (storedCategory) {
+    document.getElementById("category-dropdown").value = storedCategory; // Set the dropdown to the selected category
+    renderRecipes(storedCategory); // Render recipes for the selected category
+    localStorage.removeItem("selectedCategory"); // Clear the stored category after use
+} else {
+    renderRecipes(); // Render all recipes by default
+}
+
 // ===================== FAVORITE STORAGE HELPERS =====================
 function getFavorites() {
     return JSON.parse(localStorage.getItem("favorites")) || [];

@@ -16,7 +16,7 @@ function renderFavoriteRecipes() {
     const favorites = getFavorites();
 
     if (favorites.length === 0) {
-        recipeGrid.innerHTML = `<p>No favorite recipes yet.</p>`;
+        recipeGrid.innerHTML = `<p id = "no-fav" >No favorite recipes yet.</p>`;
         document.querySelector(".pagination").innerHTML = ""; // Clear pagination if no favorites
         return;
     }
