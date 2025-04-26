@@ -17,7 +17,7 @@ function renderFavoriteRecipes() {
 
     if (favorites.length === 0) {
         recipeGrid.innerHTML = `<p id = "no-fav" >No favorite recipes yet.</p>`;
-        document.querySelector(".pagination").innerHTML = ""; // Clear pagination if no favorites
+        document.querySelector(".pagination").innerHTML = "";
         return;
     }
 
@@ -45,23 +45,21 @@ function renderFavoriteRecipes() {
         `;
     });
 
-    // Add unfavorite button click events
     document.querySelectorAll(".favorite-btn").forEach(button => {
         button.addEventListener("click", toggleUnfavorite);
     });
 
-    // Add click event to open recipe in a new tab
     document.querySelectorAll(".recipe-card").forEach(card => {
         card.addEventListener("click", (event) => {
             if (!event.target.closest(".favorite-btn")) {
                 const recipeId = parseInt(card.getAttribute("data-id"));
-                localStorage.setItem('selectedRecipeId', recipeId); // Store the recipe ID in localStorage
-                window.open("recipe-detail.html", "_blank"); // Open in a new tab
+                localStorage.setItem('selectedRecipeId', recipeId);
+                window.open("recipe-detail.html", "_blank");
             }
         });
     });
 
-    renderPagination(favorites.length); // Render pagination
+    renderPagination(favorites.length);
 }
 
 // ===================== PAGINATION =====================
@@ -74,12 +72,12 @@ function renderPagination(totalRecipes) {
     for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement("button");
         button.textContent = i;
-        button.classList.add("pagination-btn"); // Add the class for styling
+        button.classList.add("pagination-btn");
         if (i === currentPage) button.classList.add("active");
 
         button.addEventListener("click", () => {
             currentPage = i;
-            renderFavoriteRecipes(); // Corrected function call
+            renderFavoriteRecipes();
         });
 
         paginationContainer.appendChild(button);
@@ -92,10 +90,10 @@ function toggleUnfavorite(event) {
     const index = parseInt(button.getAttribute("data-index"));
     let favorites = getFavorites();
 
-    favorites.splice(index, 1); // Remove the selected favorite
+    favorites.splice(index, 1);
     saveFavorites(favorites);
 
-    renderFavoriteRecipes(); // Re-render
+    renderFavoriteRecipes();
 }
 
 // ===================== INIT =====================

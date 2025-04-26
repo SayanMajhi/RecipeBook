@@ -2,16 +2,7 @@ import { recipes } from './RecipeData.js';
 
 let currentPage = 1;
 const recipesPerPage = 12;
-
-// ===================== INITIAL RENDER =====================
-const storedCategory = localStorage.getItem("selectedCategory");
-if (storedCategory) {
-    document.getElementById("category-dropdown").value = storedCategory; // Set the dropdown to the selected category
-    renderRecipes(storedCategory); // Render recipes for the selected category
-    localStorage.removeItem("selectedCategory"); // Clear the stored category after use
-} else {
-    renderRecipes(); // Render all recipes by default
-}
+const categoryDropdown = document.getElementById("category-dropdown");
 
 // ===================== FAVORITE STORAGE HELPERS =====================
 function getFavorites() {
@@ -37,8 +28,7 @@ function renderRecipes(selectedCategory = "all") {
         : recipes.filter(recipe => recipe.category === selectedCategory);
 
     const startIndex = (currentPage - 1) * recipesPerPage;
-    const endIndex = startIndex + recipesPerPage;
-    const paginatedRecipes = filteredRecipes.slice(startIndex, endIndex);
+    const paginatedRecipes = filteredRecipes.slice(startIndex, startIndex + recipesPerPage);
 
     paginatedRecipes.forEach((recipe, index) => {
         const globalIndex = index + startIndex;
@@ -60,17 +50,18 @@ function renderRecipes(selectedCategory = "all") {
         `;
     });
 
-    // Add heart toggle click events
+    // Heart toggle
     document.querySelectorAll(".favorite-btn").forEach(button => {
         button.addEventListener("click", toggleFavorite);
     });
 
+    // Card click
     document.querySelectorAll(".recipe-card").forEach(card => {
         card.addEventListener("click", (event) => {
             if (!event.target.closest(".favorite-btn")) {
                 const recipeId = parseInt(card.getAttribute("data-id"));
-                localStorage.setItem('selectedRecipeId', recipeId); // Store the recipe ID in localStorage
-                window.location.href = "recipe-detail.html"; // Redirect to the recipe-detail.html page
+                localStorage.setItem("selectedRecipeId", recipeId);
+                window.location.href = "recipe-detail.html";
             }
         });
     });
@@ -98,7 +89,6 @@ function toggleFavorite(event) {
     }
 
     saveFavorites(favorites);
-    console.log("Favorites:", favorites);
 }
 
 // ===================== PAGINATION =====================
@@ -111,12 +101,12 @@ function renderPagination(totalRecipes) {
     for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement("button");
         button.textContent = i;
-        button.classList.add("pagination-btn"); // Add the class for styling
+        button.classList.add("pagination-btn");
         if (i === currentPage) button.classList.add("active");
 
         button.addEventListener("click", () => {
             currentPage = i;
-            renderRecipes(document.getElementById("category-dropdown").value);
+            renderRecipes(categoryDropdown.value);
         });
 
         paginationContainer.appendChild(button);
@@ -124,10 +114,17 @@ function renderPagination(totalRecipes) {
 }
 
 // ===================== CATEGORY FILTER =====================
-document.getElementById("category-dropdown").addEventListener("change", () => {
+categoryDropdown.addEventListener("change", () => {
     currentPage = 1;
-    renderRecipes(document.getElementById("category-dropdown").value);
+    renderRecipes(categoryDropdown.value);
 });
 
 // ===================== INITIAL RENDER =====================
-renderRecipes();
+const storedCategory = localStorage.getItem("selectedCategory");
+if (storedCategory) {
+    categoryDropdown.value = storedCategory;
+    renderRecipes(storedCategory);
+    localStorage.removeItem("selectedCategory");
+} else {
+    renderRecipes(); // default to all
+}
